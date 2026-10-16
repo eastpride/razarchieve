@@ -81,12 +81,19 @@ document.addEventListener("DOMContentLoaded", () => {
     updateButtons();
   });
 
-  audio.addEventListener("pause", () => {
-    if (!audio.ended) {
-      status.textContent = "PAUSED";
-    }
+audio.addEventListener("ended", () => {
+  const trackList = Array.from(tracks);
+  const currentIndex = trackList.indexOf(currentTrack);
+  const nextTrack = trackList[currentIndex + 1];
+
+  if (nextTrack) {
+    playTrack(nextTrack);
+  } else {
+    status.textContent = "PLAYBACK COMPLETE";
+    message.textContent = "ALL TRACKS PLAYED. SELECT ANOTHER RECORD.";
     updateButtons();
-  });
+  }
+});
 
   audio.addEventListener("ended", () => {
     status.textContent = "PLAYBACK COMPLETE";
