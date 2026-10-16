@@ -436,3 +436,40 @@ $("#mobileMenu").addEventListener("click", () => {
 // Set the initial screen and button states.
 document.body.dataset.view = "Discover";
 syncSaveButtons();
+document.addEventListener("DOMContentLoaded", () => {
+  const player = document.getElementById("archive-audio");
+  const label = document.getElementById("archive-now-playing");
+  const buttons = document.querySelectorAll(".archive-play");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const file = button.dataset.file;
+      const title = button.dataset.title;
+      const source = new URL(`./audio/${file}`, document.baseURI).href;
+
+      if (player.src !== source) {
+        player.src = source;
+      }
+
+      label.textContent = `NOW PLAYING — ${title}`;
+
+      try {
+        await player.play();
+
+        buttons.forEach((item) => {
+          item.textContent = "▶ PLAY";
+        });
+
+        button.textContent = "Ⅱ PAUSE";
+      } catch (error) {
+        label.textContent = `CAN'T PLAY — CHECK ${file}`;
+      }
+    });
+  });
+
+  player.addEventListener("pause", () => {
+    buttons.forEach((button) => {
+      button.textContent = "▶ PLAY";
+    });
+  });
+});
