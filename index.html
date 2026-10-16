@@ -1,370 +1,150 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0B0B0C">
-  <title>RAZARCHIVE — An Archive for the Unheard</title>
-  <meta name="description" content="An independent archive for sounds, stories, and unheard talent.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="RAZARCHIVE — six songs, one story that never really left.">
+  <title>RAZARCHIVE — The Soundtrack</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <a class="wordmark" href="#" aria-label="RAZARCHIVE home">
-        <span class="logo-mark">R<span>/</span></span>
-        <span>RAZ<span class="wordmark-light">ARCHIVE</span></span>
-      </a>
+  <header class="site-header">
+    <a class="logo" href="#home">RAZ<span>ARCHIVE</span></a>
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#music">THE ARCHIVE</a>
+    </nav>
+    <span class="status"><i></i> ARCHIVE ONLINE</span>
+  </header>
 
-      <div class="side-label">YOUR SPACE</div>
-      <nav class="main-nav" aria-label="Main navigation">
-        <button class="nav-link active" data-view="Discover">
-          <span class="nav-icon">◈</span> Discover
-        </button>
-        <button class="nav-link" data-view="The Archive">
-          <span class="nav-icon">▤</span> The Archive
-        </button>
-        <button class="nav-link" data-view="Search">
-          <span class="nav-icon">⌕</span> Search
-        </button>
-        <button class="nav-link" data-view="Saved">
-          <span class="nav-icon">♡</span> Saved
-        </button>
-      </nav>
-
-      <div class="side-label side-label-community">THE COMMUNITY</div>
-      <nav class="main-nav">
-        <button class="nav-link" data-view="The Unheard">
-          <span class="nav-icon">↗</span> The Unheard
-        </button>
-        <button class="nav-link" data-view="About">
-          <span class="nav-icon">◌</span> About RAZAR
-        </button>
-      </nav>
-
-      <div class="sidebar-bottom">
-        <div class="sidebar-note">
-          <span class="tiny-dot"></span>
-          <span>INDEPENDENT BY NATURE</span>
-        </div>
-        <p>Some sounds deserve<br>to be found.</p>
-        <span class="copyright">RAZARCHIVE © 2026</span>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-orbit orbit-one"></div>
+      <div class="hero-orbit orbit-two"></div>
+      <div class="hero-content">
+        <p class="eyebrow">PERSONAL AUDIO ARCHIVE / 001</p>
+        <h1>Some things<br>never <span>leave.</span></h1>
+        <p class="hero-description">
+          Six songs. One unfinished story.
+          Everything that was felt, lost, and left behind.
+        </p>
+        <a class="primary-link" href="#music">
+          ENTER THE ARCHIVE <span>↘</span>
+        </a>
       </div>
-    </aside>
+      <div class="hero-coordinate">FILE: RZ-0006<br>STATUS: PRESERVED</div>
+      <div class="hero-bottom">
+        <span>LOVE / LOSS / MEMORY</span>
+        <span>SCROLL TO EXPLORE ↓</span>
+      </div>
+    </section>
 
-    <main class="main-content">
-      <header class="topbar">
-        <button class="mobile-brand" id="mobileMenu" aria-label="Open navigation">☰</button>
-        <div class="breadcrumb"><span>RAZARCHIVE</span><span class="crumb-slash">/</span><span id="currentSection">DISCOVER</span></div>
-        <button class="submit-top" data-view="The Unheard">
-          <span>＋</span> Submit your work
-        </button>
-      </header>
+    <section class="about section-wrap" id="about">
+      <p class="eyebrow">01 / THE IDEA</p>
+      <h2>A place for the<br><span>things that remain.</span></h2>
+      <p class="about-copy">
+        Not every story ends when two people part ways.
+        Some live on in memories, unsent words, and songs
+        that say what could never be said out loud.
+      </p>
+    </section>
 
-      <section class="hero">
-        <div class="hero-grain"></div>
-        <div class="hero-content">
-          <div class="eyebrow"><span class="live-dot"></span> AN INDEPENDENT MUSIC ARCHIVE</div>
-          <h1>For the sounds<br>that <span>go unheard.</span></h1>
-          <p class="hero-copy">
-            A home for unfinished thoughts, hidden talent,
-            and music that deserves a place in the world.
-          </p>
-          <div class="hero-actions">
-            <button class="button-primary" data-view="The Archive">
-              Explore the archive <span>↗</span>
-            </button>
-            <button class="button-quiet" data-view="The Unheard">
-              Share your work <span>→</span>
-            </button>
-          </div>
-          <div class="hero-footnote">
-            <span class="hero-index">01 / 03</span>
-            <span class="footnote-line"></span>
-            <span>NOT EVERYTHING NEEDS TO BE LOUD.</span>
-          </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="orbit orbit-three"></div>
-          <div class="art-core">
-            <span class="core-symbol">R<span>/</span></span>
-          </div>
-          <div class="art-cross cross-a"></div>
-          <div class="art-cross cross-b"></div>
-          <div class="art-caption">ARCHIVE<br>NO. 001</div>
-          <div class="art-vertical">SOUND / MEMORY / IDENTITY</div>
-        </div>
-        <div class="hero-number">RA—001</div>
-      </section>
-
-      <section class="stats-strip" aria-label="Archive philosophy">
-        <div><span class="stat-number">01</span><span class="stat-label">ONE PLACE</span></div>
-        <div><span class="stat-number">∞</span><span class="stat-label">WAYS TO CREATE</span></div>
-        <div><span class="stat-number">RAW.</span><span class="stat-label">REAL. UNHEARD.</span></div>
-      </section>
-
-      <section class="content-section" id="featuredSection">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow muted-eyebrow">HANDPICKED FOR YOUR EARS</div>
-            <h2>Inside the archive<span class="red-period">.</span></h2>
-          </div>
-          <button class="text-link" data-view="The Archive">View all works <span>↗</span></button>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card featured-card" data-type="Original song" data-title="AFTER THE STATIC" data-artist="RAZAR">
-            <div class="cover cover-static">
-              <div class="cover-grain"></div>
-              <span class="cover-tag">RA / 001</span>
-              <div class="static-lines"></div>
-              <div class="cover-big-type">AFTER<br>THE<br><em>STATIC.</em></div>
-              <span class="cover-bottom">A STUDY IN SILENCE</span>
-              <button class="cover-play play-track" aria-label="Select After the Static">▶</button>
-            </div>
-            <div class="track-info">
-              <div><h3>After the Static</h3><p>RAZAR · Original song</p></div>
-              <button class="more-button save-track" aria-label="Save After the Static">♡</button>
-            </div>
-          </article>
-
-          <article class="feature-card" data-type="Demo" data-title="ROOM WITHOUT WINDOWS" data-artist="ANONYMOUS">
-            <div class="cover cover-room">
-              <span class="cover-tag">UNHEARD / 014</span>
-              <div class="room-window"><span></span></div>
-              <div class="room-type">ROOM<br>WITHOUT<br><i>WINDOWS</i></div>
-              <span class="cover-bottom">DEMO · NO. 014</span>
-              <button class="cover-play play-track" aria-label="Select Room Without Windows">▶</button>
-            </div>
-            <div class="track-info">
-              <div><h3>Room Without Windows</h3><p>Anonymous · Demo</p></div>
-              <button class="more-button save-track" aria-label="Save Room Without Windows">♡</button>
-            </div>
-          </article>
-
-          <article class="feature-card" data-type="Instrumental" data-title="SLOW MOTION CITY" data-artist="RAZAR">
-            <div class="cover cover-city">
-              <span class="cover-tag">FIELD NOTES / 003</span>
-              <div class="city-sun"></div>
-              <div class="cityscape"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="city-type">SLOW MOTION<br><span>CITY</span></div>
-              <span class="cover-bottom">INSTRUMENTAL STUDY</span>
-              <button class="cover-play play-track" aria-label="Select Slow Motion City">▶</button>
-            </div>
-            <div class="track-info">
-              <div><h3>Slow Motion City</h3><p>RAZAR · Instrumental</p></div>
-              <button class="more-button save-track" aria-label="Save Slow Motion City">♡</button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section archive-section">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow muted-eyebrow">A LITTLE BIT OF EVERYTHING</div>
-            <h2>Recently archived<span class="red-period">.</span></h2>
-          </div>
-          <button class="text-link" data-view="The Archive">Full archive <span>↗</span></button>
-        </div>
-
-        <div class="filter-row" id="filterRow">
-          <button class="filter-chip selected" data-filter="All">All works <span>06</span></button>
-          <button class="filter-chip" data-filter="Original song">Originals</button>
-          <button class="filter-chip" data-filter="Demo">Demos</button>
-          <button class="filter-chip" data-filter="Instrumental">Instrumentals</button>
-          <button class="filter-chip" data-filter="Lyrics">Lyrics</button>
-        </div>
-
-        <div class="archive-list" id="archiveList">
-          <article class="archive-row" data-type="Original song" data-title="BLUE HOUR" data-artist="RAZAR">
-            <div class="row-art art-blue"><span>BH.</span></div>
-            <div class="row-main"><h3>Blue Hour</h3><p>RAZAR</p></div>
-            <span class="row-type">Original song</span>
-            <span class="row-mood">Melancholic</span>
-            <button class="row-play play-track" aria-label="Select Blue Hour">▶</button>
-            <button class="row-save save-track" aria-label="Save Blue Hour">♡</button>
-          </article>
-          <article class="archive-row" data-type="Lyrics" data-title="THINGS I NEVER SENT" data-artist="ANONYMOUS">
-            <div class="row-art art-paper"><span>unsent<br>letters</span></div>
-            <div class="row-main"><h3>Things I Never Sent</h3><p>Anonymous</p></div>
-            <span class="row-type">Lyrics</span>
-            <span class="row-mood">Introspective</span>
-            <button class="row-play play-track" aria-label="Select Things I Never Sent">▶</button>
-            <button class="row-save save-track" aria-label="Save Things I Never Sent">♡</button>
-          </article>
-          <article class="archive-row" data-type="Instrumental" data-title="3:17 AM" data-artist="RAZAR">
-            <div class="row-art art-night"><span>3:17<br><small>AM</small></span></div>
-            <div class="row-main"><h3>3:17 AM</h3><p>RAZAR</p></div>
-            <span class="row-type">Instrumental</span>
-            <span class="row-mood">Late night</span>
-            <button class="row-play play-track" aria-label="Select 3:17 AM">▶</button>
-            <button class="row-save save-track" aria-label="Save 3:17 AM">♡</button>
-          </article>
-          <article class="archive-row" data-type="Demo" data-title="GHOST NOTES" data-artist="ANONYMOUS">
-            <div class="row-art art-red"><span>GHOST<br>NOTES</span></div>
-            <div class="row-main"><h3>Ghost Notes</h3><p>Anonymous</p></div>
-            <span class="row-type">Demo</span>
-            <span class="row-mood">Raw</span>
-            <button class="row-play play-track" aria-label="Select Ghost Notes">▶</button>
-            <button class="row-save save-track" aria-label="Save Ghost Notes">♡</button>
-          </article>
-          <article class="archive-row" data-type="Original song" data-title="NO REPLY" data-artist="RAZAR">
-            <div class="row-art art-grey"><span>NO<br>REPLY</span></div>
-            <div class="row-main"><h3>No Reply</h3><p>RAZAR</p></div>
-            <span class="row-type">Original song</span>
-            <span class="row-mood">Alternative</span>
-            <button class="row-play play-track" aria-label="Select No Reply">▶</button>
-            <button class="row-save save-track" aria-label="Save No Reply">♡</button>
-          </article>
-          <article class="archive-row" data-type="Lyrics" data-title="A PLACE TO PUT IT" data-artist="ANONYMOUS">
-            <div class="row-art art-cream"><span>somewhere<br>to put it.</span></div>
-            <div class="row-main"><h3>A Place to Put It</h3><p>Anonymous</p></div>
-            <span class="row-type">Lyrics</span>
-            <span class="row-mood">Personal</span>
-            <button class="row-play play-track" aria-label="Select A Place to Put It">▶</button>
-            <button class="row-save save-track" aria-label="Save A Place to Put It">♡</button>
-          </article>
-        </div>
-        <p class="empty-state" id="emptyState" hidden>No works in this category yet.</p>
-      </section>
-
-      <section class="unheard-banner">
-        <div class="banner-symbol">R<span>/</span></div>
+    <section class="music section-wrap" id="music">
+      <div class="section-heading">
         <div>
-          <div class="eyebrow">YOUR WORK BELONGS SOMEWHERE</div>
-          <h2>Still unfinished?<br><span>Start here.</span></h2>
-          <p>Lyrics in your notes. A demo on your phone. An idea you haven't shown anyone.</p>
+          <p class="eyebrow">02 / THE COLLECTION</p>
+          <h2>The <span>Soundtrack.</span></h2>
         </div>
-        <button class="button-primary" data-view="The Unheard">Enter The Unheard <span>↗</span></button>
-      </section>
-
-      <footer class="site-footer">
-        <a class="footer-brand" href="#">RAZARCHIVE<span>®</span></a>
-        <span>AN ARCHIVE FOR THE UNHEARD.</span>
-        <span>MADE FOR WHAT COMES NEXT.</span>
-      </footer>
-    </main>
-  </div>
-
-  <nav class="mobile-nav" aria-label="Mobile navigation">
-    <button class="mobile-nav-link active" data-view="Discover"><span>◈</span>Home</button>
-    <button class="mobile-nav-link" data-view="The Archive"><span>▤</span>Archive</button>
-    <button class="mobile-nav-link" data-view="Search"><span>⌕</span>Search</button>
-    <button class="mobile-nav-link" data-view="Saved"><span>♡</span>Saved</button>
-  </nav>
-
-  <div class="player-bar">
-    <div class="player-track">
-      <div class="player-art"><span>R<span>/</span></span></div>
-      <div class="player-track-text">
-        <strong id="playerTitle">Nothing playing yet</strong>
-        <span id="playerArtist">Choose a work from the archive</span>
+        <p class="track-count">06 AUDIO FILES<br>ONE PERSONAL HISTORY</p>
       </div>
-      <button class="player-save save-track" aria-label="Save current work">♡</button>
-    </div>
-    <div class="player-controls">
-      <div class="control-buttons">
-        <button class="player-control" id="shuffleButton" aria-label="Shuffle">⤨</button>
-        <button class="player-control" id="previousButton" aria-label="Previous track">|◀</button>
-        <button class="main-play" id="mainPlay" aria-label="Play or pause">▶</button>
-        <button class="player-control" id="nextButton" aria-label="Next track">▶|</button>
-        <button class="player-control" id="repeatButton" aria-label="Repeat">↻</button>
-      </div>
-      <div class="progress-line">
-        <span id="currentTime">0:00</span>
-        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-        <span id="totalTime">--:--</span>
-      </div>
-    </div>
-    <div class="player-extra">
-      <span class="volume-icon">◖))</span>
-      <div class="volume-track"><div></div></div>
-      <button class="queue-button" data-view="The Archive" aria-label="Open archive">☷</button>
-    </div>
-    <audio id="audioPlayer" preload="none"></audio>
-  </div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
-  <section class="archive-music" id="music">
-  <p class="section-label">THE ARCHIVE / 001—006</p>
-  <h2>THE SOUNDTRACK</h2>
-  <p class="archive-description">
-    Six songs. One story that never really left.
-  </p>
+      <div class="track-list">
+        <article class="track" data-file="youre-my-queen.mp3">
+          <span class="track-number">001</span>
+          <div class="track-info">
+            <h3>You're My Queen</h3>
+            <p>THE BEGINNING <span>·</span> FALLING IN LOVE</p>
+          </div>
+          <button class="play-button" type="button" aria-label="Play You're My Queen">PLAY <span>↗</span></button>
+        </article>
 
-  <div class="archive-tracklist">
-    <article class="archive-track">
-      <span class="track-number">001</span>
-      <div class="track-details">
-        <h3>You're My Queen</h3>
-        <p>THE BEGINNING</p>
+        <article class="track" data-file="nothing-to-make-it-enough.mp3">
+          <span class="track-number">002</span>
+          <div class="track-info">
+            <h3>Nothing To Make It Enough</h3>
+            <p>THE BETRAYAL <span>·</span> REVERSED PERSPECTIVE</p>
+          </div>
+          <button class="play-button" type="button" aria-label="Play Nothing To Make It Enough">PLAY <span>↗</span></button>
+        </article>
+
+        <article class="track" data-file="stories-you-wont-hear.mp3">
+          <span class="track-number">003</span>
+          <div class="track-info">
+            <h3>Stories You Won't Hear</h3>
+            <p>THE UNSAID <span>·</span> HIDDEN FEELINGS</p>
+          </div>
+          <button class="play-button" type="button" aria-label="Play Stories You Won't Hear">PLAY <span>↗</span></button>
+        </article>
+
+        <article class="track" data-file="better-than-me.mp3">
+          <span class="track-number">004</span>
+          <div class="track-info">
+            <h3>Better Than Me</h3>
+            <p>SELF-WORTH <span>·</span> GIVING EVERYTHING</p>
+          </div>
+          <button class="play-button" type="button" aria-label="Play Better Than Me">PLAY <span>↗</span></button>
+        </article>
+
+        <article class="track" data-file="ended-up.mp3">
+          <span class="track-number">005</span>
+          <div class="track-info">
+            <h3>Ended Up</h3>
+            <p>THE END <span>·</span> AFTER EVERYTHING</p>
+          </div>
+          <button class="play-button" type="button" aria-label="Play Ended Up">PLAY <span>↗</span></button>
+        </article>
+
+        <article class="track" data-file="even-if-were-never-us-again.mp3">
+          <span class="track-number">006</span>
+          <div class="track-info">
+            <h3>Even If We're Never Us Again</h3>
+            <p>WHAT REMAINS <span>·</span> STILL HERE</p>
+          </div>
+          <button class="play-button" type="button" aria-label="Play Even If We're Never Us Again">PLAY <span>↗</span></button>
+        </article>
       </div>
-      <button class="archive-play" data-file="youre-my-queen.mp3"
-        data-title="You're My Queen">▶ PLAY</button>
-    </article>
 
-    <article class="archive-track">
-      <span class="track-number">002</span>
-      <div class="track-details">
-        <h3>Nothing To Make It Enough</h3>
-        <p>THE BETRAYAL</p>
+      <div class="player-panel" id="player-panel">
+        <div class="player-heading">
+          <div>
+            <p class="eyebrow">NOW ACCESSING</p>
+            <h3 id="now-playing">Select a track</h3>
+          </div>
+          <span class="player-indicator" id="player-status">STANDBY</span>
+        </div>
+        <audio id="audio-player" controls preload="none">
+          Your browser does not support audio playback.
+        </audio>
+        <p class="player-note" id="player-message">
+          SELECT A FILE TO BEGIN PLAYBACK.
+        </p>
       </div>
-      <button class="archive-play" data-file="nothing-to-make-it-enough.mp3"
-        data-title="Nothing To Make It Enough">▶ PLAY</button>
-    </article>
+    </section>
 
-    <article class="archive-track">
-      <span class="track-number">003</span>
-      <div class="track-details">
-        <h3>Stories You Won't Hear</h3>
-        <p>THE UNSAID</p>
-      </div>
-      <button class="archive-play" data-file="stories-you-wont-hear.mp3"
-        data-title="Stories You Won't Hear">▶ PLAY</button>
-    </article>
+    <section class="closing section-wrap">
+      <p class="eyebrow">03 / THE LAST RECORD</p>
+      <h2>Even when it's over,<br><span>something stays.</span></h2>
+      <p>END OF INDEX — NOT THE END OF EVERY MEMORY.</p>
+    </section>
+  </main>
 
-    <article class="archive-track">
-      <span class="track-number">004</span>
-      <div class="track-details">
-        <h3>Better Than Me</h3>
-        <p>SELF-WORTH</p>
-      </div>
-      <button class="archive-play" data-file="better-than-me.mp3"
-        data-title="Better Than Me">▶ PLAY</button>
-    </article>
-
-    <article class="archive-track">
-      <span class="track-number">005</span>
-      <div class="track-details">
-        <h3>Ended Up</h3>
-        <p>THE END</p>
-      </div>
-      <button class="archive-play" data-file="ended-up.mp3"
-        data-title="Ended Up">▶ PLAY</button>
-    </article>
-
-    <article class="archive-track">
-      <span class="track-number">006</span>
-      <div class="track-details">
-        <h3>Even If We're Never Us Again</h3>
-        <p>WHAT REMAINS</p>
-      </div>
-      <button class="archive-play" data-file="even-if-were-never-us-again.mp3"
-        data-title="Even If We're Never Us Again">▶ PLAY</button>
-    </article>
-  </div>
-
-  <div class="archive-player">
-    <p id="archive-now-playing">SELECT A TRACK</p>
-    <audio id="archive-audio" controls preload="none"></audio>
-  </div>
-</section>
+  <footer class="site-footer">
+    <a class="logo" href="#home">RAZ<span>ARCHIVE</span></a>
+    <p>PRIVATE MEMORIES. PRESERVED IN SOUND.</p>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+  </footer>
 </body>
 </html>
